@@ -4,9 +4,11 @@
 
 #include <stdio.h>
 #include "repl.h"
+#include "banner.h"
+
 
 int main(void) {
-
+    print_banner();
     repl_loop();
     return 0;
 }

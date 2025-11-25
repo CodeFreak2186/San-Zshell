@@ -17,4 +17,7 @@ add_executable(San_Z_shell ${CORE_SOURCES} ${EXEC_SOURCES}
         src/core/prompt.c
         src/core/repl.c
         src/executor/executor.c
-        src/executor/builtins.c)
+        src/executor/builtins.c
+        src/banner.c
+        include/banner.h
+)

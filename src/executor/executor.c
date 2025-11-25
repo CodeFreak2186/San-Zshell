@@ -8,7 +8,6 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
-
 #include "executor.h"
 
 /* Execute external command via fork + execvp + waitpid */
@@ -26,6 +25,7 @@ void execute_command(char **args) {
         perror(args[0]);
         _exit(127);
     } else {
+
         /* Parent: wait for child */
         int status = 0;
         if (waitpid(pid, &status, 0) == -1) {
